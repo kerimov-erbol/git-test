@@ -1,0 +1,18 @@
+@use "../abstract-index" as *;
+
+.main-page{
+     max-width: 1300px;
+     min-width: 330px;
+     margin: 0 auto;
+     background-color: #212121;
+}
+@include for-mobile{
+     .main-page{
+          max-width: 990px;
+          min-width: 330px;
+          margin: 0 auto;
+
+     }
+     
+
+}

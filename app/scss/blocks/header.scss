@@ -1,0 +1,87 @@
+@use "../abstract-index" as *;
+.header{
+background-color: #000000;
+     display: flex;
+     align-items: center;
+     height: 70px;
+     
+
+     &__burger-menu-containe{
+          display: none;
+          
+     }
+     &__burger-menu-item{
+          width: 20px;
+          height: 2px;
+          border-radius: 10px;
+          background-color: rgb(255, 255, 255);
+     }
+
+
+     &__logo-container{
+          flex: 1;
+          display: flex;
+          align-items: start;
+          padding-left: 20px;
+     }
+
+                              
+     &__navigation-container{
+          flex: 1;
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+     
+     }
+     &__navigation-list-link{
+          color: white;
+          text-transform: uppercase;
+     }
+
+
+     &__contact-list-container{
+         flex: 1;
+        font-size: 9px;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          padding-right: 10px;
+         
+     }
+     &__contact-list-link{
+          color: white;
+     }
+
+
+
+}
+
+
+@include for-mobile{
+     .header{
+          height: 40px;
+          
+          &__burger-menu-container{
+               flex: 1;
+               display: flex;
+               flex-direction: column;
+               gap: 4px;
+               padding-left: 20px;
+          }
+          &__navigation-container{
+               display: none;
+          }
+          &__logo-container{
+               flex: 1;
+               display: flex;
+               justify-content: center;
+               padding: 0px;
+          }
+     
+     
+     }
+     
+
+     
+
+}

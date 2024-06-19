@@ -1,0 +1,19 @@
+@use "../abstract-index" as *;
+.hero{
+    height: 500px;
+    background-image: url(../../img/hero.webp);
+    background-position: center;
+
+}
+
+
+@include for-mobile{
+     .hero{
+       
+     
+     }
+     
+
+     
+
+}
