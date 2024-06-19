@@ -1,18 +1,30 @@
 # Краткая инструкция по работе
 
-1. [Установить node.js](https://nodejs.org/download/release/latest-v16.x/). Сборка работает на 16 версии
-2. С помощью терминала установить зависимости - `npm ci`
-3. Запустить сборку - `npm start`
-4. Для проверки на ошибки запустить `npm run lint`
 
 
 
+# NPM
 
 
+# Gulp (npm install --save-dev gulp)
+1. Компиляция SCSS на CSS (npm install sass gulp-plumber gulp-sass --save-dev)
+    - sass 
+    - gulp-plumber 
+    - gulp-sass
 
+    - del- to delet files form buld forlder after changin in dew
 
-# Gulp 
-1. Компиляция SCSS на CSS
-2. Формирование JS bundle
+    - postcss
+        - postcss-url
+        - autoprefixer
+        - postcss-csso
+        - css nano
+
+    - 
+    - gulp-clean-css
+    - gulp-notify
+
+  
+
 3. Оптимизация графики
 4. 
