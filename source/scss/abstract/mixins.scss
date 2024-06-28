@@ -26,3 +26,157 @@
    @mixin for-big-desktop-up {
      @media (min-width: 1800px) { @content; }
    }
+
+
+
+
+
+
+
+   // прятать элементы из дизайна, но оставлять доступным их содержимое для скринридеров
+
+@mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+ 
+  @mixin responsive($query) {
+    @media ( min-width:$query ) {
+        @content;
+    }
+ }
+
+
+
+
+
+
+// @mixin media-query($font) {
+//    @if $font== desktop-heading-1 {
+//       font-weight: 500;
+//       font-size: 35px;
+//    };
+//    @if $font == desktop-heading-2 {
+//       font-weight: 400;
+//       font-size: 26px;
+//       line-height: 35px;
+//    };
+//    @if $font== desktop-heading-3 {
+//       font-weight: 400;
+//       font-size: 20px;
+//       line-height: 26px;
+
+//    };
+   
+//  }
+
+// TypeFace - Desktop
+
+@mixin desk-heading-1{
+    font-family: Dm Sans;
+    font-weight: 500;
+    font-size: 35px;
+ 
+ }
+ @mixin desk-heading-2{
+    font-family: Dm Sans;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 35px;
+ }
+ @mixin desk-heading-3{
+    font-family: Dm Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+ }
+ @mixin desk-heading-4{
+    font-family: Dm Sans;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+ }
+ @mixin desk-heading-5{
+    font-family: Dm Sans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+ }
+ @mixin desk-body-large{
+    font-family: Dm Sans;
+    font-size: 16px;
+    font-weight: 700;
+ }
+ 
+ @mixin desk-body-medium{
+    font-family: Dm Sans;
+    font-size: 14px;
+    font-weight: 400;
+ }
+ 
+ @mixin desk-body-medium{
+    font-family: Dm Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+ }
+ // TypeFace - Mobile
+ 
+ @mixin mobile-heading-1{
+    font-family: Dm Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+ }
+ 
+ @mixin mobile-heading-2{
+    font-family: Dm Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+ }
+ 
+ @mixin mobile-heading-3{
+    font-family: Dm Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+ }
+ 
+ @mixin mobile-heading-4{
+    font-family: Dm Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+ }
+
+
+
+
+
+
+
+ $xl: 87.5em; // 4k and hi-res desktop
+$lg: 60em; // 1080 and hi-res laptops
+$med: 40em; // hi-res tablets and low-res laptops
+$sm: 28em; // mobile and low-res tablets
+$xs: 20em;
+
+// @mixin responsive($query) {
+//    @media ( min-width:  $query ) {
+//        @content;
+//    }
+// }
+
+// @include responsive($lg) {
+//    display: block;
+//    background-color: hot-pink;
+// }

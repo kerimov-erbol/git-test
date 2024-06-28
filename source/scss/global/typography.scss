@@ -1,7 +1,61 @@
-*{
-    font-family: 'Inter', sans-serif;
+/* здесь подключите шрифты*/
+
+
+// Examlple
+
+// @font-face {
+//     font-family: 'FONT FAMILY NAME';
+//         src: url('../../fonts/') format('woff2'),
+//         url('../../fonts/') format('woff'),
+//         url(../../fonts/AbhayaLibre-Medium.ttf) format("ttf");
+//     font-weight: 200/300/400/500/600/700/800/900;
+//     font-style: normal/italic/obisue;
+// }
+
+
+@font-face {
+    font-family: 'Abhaya Libre';
+        src: url('../../fonts/Abhayalibre-Medium.woff2') format('woff2'),
+             url('../../fonts/Abhayalibre-Medium.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
 }
-html{
-  font-size: 14px;
-  color: white;
+@font-face {
+    font-family: 'Abhaya Libre';
+        src: url('../../fonts/AbhayaLibre-Regular-webfont.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
 }
+@font-face {
+    font-family: 'VisbyCF Bold';
+        src: url('../../fonts/VisbyCF-Bold.woff2') format('woff2');
+        src: url('../../fonts/VisbyCF-Bold.woff') format('woff');
+      
+}
+@font-face {
+    font-family: 'VisbyCF DemiBold';
+        src: url('../../fonts/VisbyCF-DemiBold.woff2') format('woff2');
+        src: url('../../fonts/VisbyCF-DemiBold.woff') format('woff');
+      
+}
+@font-face {
+    font-family: 'VisbyCF Ligh';
+        src: url('../../fonts/VisbyCF-Light.woff2') format('woff2');
+        src: url('../../fonts/VisbyCF-Light.woff') format('woff');
+      
+}
+@font-face {
+    font-family: 'VisbyCF Medium';
+        src: url('../../fonts/VisbyCF-Medium.woff2') format('woff2');
+        src: url('../../fonts/VisbyCF-Medium.woff2') format('woff');
+      
+}
+
+@font-face {
+    font-family: 'VisbyCF MediumOblique';
+        src: url('../../fonts/VisbyCF-MediumOblique.woff2') format('woff2');
+        src: url('../../fonts/VisbyCF-MediumOblique.woff') format('woff');
+      
+}
+
+

@@ -64,26 +64,32 @@ export function processScripts () {
         .pipe(browser.stream());
 }
 
+
 //-------------------------------SCSS-------------------------------
 export function processStyles(){
     return gulp.src('source/scss/style.scss', { sourcemaps: isDevelopment })
     .pipe(plumber())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))  
     .pipe(postcss([
         postUrl({ assetsPath: '../' }),
         autoprefixer(),
-        csso()
+        // csso()
     ]))
     .pipe(gulp.dest('app/css/', { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
 }
+//-------------------------------FONTS-------------------------------
+// !!!!!!!!! читать 3.2 Readme
+export function processFonts () {
+    return gulp.src('source/fonts/*.*',{ encoding: false })
+    .pipe(gulp.dest('app/fonts'));
+}
 
 //-------------------------------IMG-------------------------------
+
+// !!!!!!!!! читать 3.2 Readme
 export function processImages() {
     return gulp.src(['source/img/*.{jpg,jpeg,png,svg}'],{ encoding: false })
-    .on('data', function(file) {
-      console.log('Processing:', file.path, 'Size:', file.contents.length, 'bytes');
-    })
     .pipe(gulp.dest('app/img'));
 }
 
@@ -153,7 +159,8 @@ function compileProject (done) {
       processMarkup,
       processStyles,
       processScripts,
-      processImages
+      processImages,
+      processFonts
     //   optimizeImages,
     //   createWebp
     )(done);

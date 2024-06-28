@@ -5,7 +5,26 @@
      min-width: 330px;
      margin: 0 auto;
      background-color: #212121;
+
+
 }
+
+.text{
+    font-family: 'Abhaya Libre';
+    font-weight: 600;
+    font-size: 90px;
+}
+
+
+.text2{
+    font-family: 'Abhaya Libre';
+    font-weight:500;
+    font-size: 90px;
+}
+
+
+
+
 @include for-mobile{
      .main-page{
           max-width: 990px;
